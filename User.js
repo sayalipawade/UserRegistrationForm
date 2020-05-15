@@ -8,7 +8,7 @@ console.log("***********Welcome to user registration**********")
 let VALIDNAMEPATTERN = new RegExp("^[A-Z]([a-zA-Z]{2,})$");
 let VALIDEMAILPATTERN=new RegExp("^[a-z][a-z0-9]*[.+-]?[a-z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]{2,3}([.]{1}[a-z]{2,3})?$");
 let VALIDMOBILEPATTERN=new RegExp("^[0-9]{2}[0-9]{10}");
-let VALIDPASSWORD=new RegExp("^([A-Za-z0-9]*[0-9]+[A-Za-z0-9]*[A-Z])|([A-Za-z0-9]*[A-Z]+[A-Za-z0-9]*[0-9])$");
+let VALIDPASSWORD=new RegExp("^([A-Za-z0-9!@#$%^&*]*[0-9]+[A-Za-z0-9]*[A-Z])|([A-Za-z0-9]*[A-Z]+[A-Za-z0-9]*[0-9])$");
 
 /**
  * Function to matching the pattern
@@ -52,7 +52,7 @@ let mobile=read.question("Enter Mobile:");
 patternMatching(mobile,VALIDMOBILEPATTERN);
 
 /**
- * Password should have at least one numeric number
+ * Password should have at least one special symbol
  */
 let password=read.question("Enter Password:");
 patternMatching(password,VALIDPASSWORD);
