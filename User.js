@@ -6,6 +6,7 @@ console.log("***********Welcome to user registration**********")
  * Constants
  */
 let validNamePattern = new RegExp("^[A-Z]([a-zA-Z]{2,})$");
+let validEmailPattern=new RegExp("^[a-z][a-z0-9]*[.+-]?[a-z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]{2,3}([.]{1}[a-z]{2,3})?$");
 
 /**
  * Function to matching the pattern
@@ -31,3 +32,9 @@ patternMatching(firstName,validNamePattern);
  */
 let lastName=read.question("Enter valid Last name:");
 patternMatching(lastName,validNamePattern);
+
+/**
+ * Checking email is valid or not
+ */
+let email=read.question("Enter Email:");
+patternMatching(email,validEmailPattern);
