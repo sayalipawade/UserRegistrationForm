@@ -3,7 +3,7 @@ let read=require('readline-sync');
 console.log("***********Welcome to user registration**********")
 
 /**
- * variables
+ * Constants
  */
 let validNamePattern = new RegExp("^[A-Z]([a-zA-Z]{2,})$");
 
@@ -25,3 +25,9 @@ function patternMatching(inputPattern,validPattern)
  */
 let firstName = read.question("Enter valid first name : ");
 patternMatching(firstName,validNamePattern);
+
+/**
+ * Checking last name is valid or not
+ */
+let lastName=read.question("Enter valid Last name:");
+patternMatching(lastName,validNamePattern);
